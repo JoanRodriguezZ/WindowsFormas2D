@@ -47,7 +47,13 @@ namespace WindowsFormas2D
         {
             listBoxFiguras2D.Items.RemoveAt(listBoxFiguras2D.SelectedIndex);
             ActualizarLista();
-            
+
+        }
+        private void listBoxFiguras2D_MouseClick(object sender, MouseEventArgs e)
+        {
+            dia.Forma2DList.RemoveAt(listBoxFiguras2D.SelectedIndex);
+            listBoxFiguras2D.Items.RemoveAt(listBoxFiguras2D.SelectedIndex);
+            ActualizarLista();
         }
 
         void ActualizarLista()
@@ -59,11 +65,5 @@ namespace WindowsFormas2D
             }
         }
 
-        private void listBoxFiguras2D_MouseClick(object sender, MouseEventArgs e)
-        {
-            dia.Forma2DList.RemoveAt(listBoxFiguras2D.SelectedIndex);
-            listBoxFiguras2D.Items.RemoveAt(listBoxFiguras2D.SelectedIndex);
-            ActualizarLista();
-        }
     }
 }

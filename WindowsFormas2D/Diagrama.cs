@@ -8,23 +8,25 @@ namespace WindowsFormas2D
 {
     class Diagrama
     {
-        public List<Forma2D> Forma2DList;
+        List<Forma2D> forma2DList;
+
+        public List<Forma2D> Forma2DList { get => forma2DList; set => forma2DList = value; }
 
         public Diagrama()
         {
-             Forma2DList = new List<Forma2D>();
+             forma2DList = new List<Forma2D>();
         }
 
         public void AddRectangulo(double l1, double l2)
         {
             Rectangulo r = new Rectangulo(l1, l2);
-            Forma2DList.Add(r);
+            forma2DList.Add(r);
         }
 
         public void AddCirculo(double r)
         {
             Circulo c = new Circulo(r);
-            Forma2DList.Add(c);
+            forma2DList.Add(c);
         }
 
         public void AddTriangulo(double v1, double v2)

@@ -11,21 +11,24 @@ namespace WindowsFormas2D
         double altura1;
         double base1;
 
+        public double Altura1 { get => altura1; set => altura1 = value; }
+        public double Base1 { get => base1; set => base1 = value; }
+
         public Triangulo(double n1, double n2)
         {
-            altura1 = n1;
-            base1 = n2;
+            Altura1 = n1;
+            Base1 = n2;
         }
 
         protected override double Area()
         {
-            double total = base1 * altura1 / 2;
+            double total = Base1 * Altura1 / 2;
             return total;
         }
 
         public override string ToString()
         {
-            return "Triangulo. Altura: " + altura1 + ". Base: " + base1 + ". Area: " + Area() + ".";
+            return "Triangulo. Altura: " + Altura1 + ". Base: " + Base1 + ". Area: " + Area() + ".";
         }
     }
 }

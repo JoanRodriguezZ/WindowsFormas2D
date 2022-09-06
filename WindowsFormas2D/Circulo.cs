@@ -8,21 +8,24 @@ namespace WindowsFormas2D
 {
     class Circulo : Forma2D
     {
-        public double radio;
+        private double radio;
+
+        public double Radio { get => radio; set => radio = value; }
+
         public Circulo(double r)
         {
-            radio = r;
+            Radio = r;
         }
 
         protected override double Area()
         {
-            double total = Math.PI * radio * radio;
+            double total = Math.PI * Radio * Radio;
             return total;
         }
 
         public override string ToString()
         {
-            return "Circulo. Radio: " + radio + ". Area: " + Area() + "." ;
+            return "Circulo. Radio: " + Radio + ". Area: " + Area() + "." ;
         }
     }
 }

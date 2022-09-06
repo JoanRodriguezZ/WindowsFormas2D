@@ -11,21 +11,24 @@ namespace WindowsFormas2D
         double lado1;
         double lado2;
 
+        public double Lado1 { get => lado1; set => lado1 = value; }
+        public double Lado2 { get => lado2; set => lado2 = value; }
+
         public Rectangulo(double l1, double l2)
         {
-            lado1 = l1;
-            lado2 = l2;
+            Lado1 = l1;
+            Lado2 = l2;
         }
 
         protected override double Area()
         {
-            double total = lado1 * lado2;
+            double total = Lado1 * Lado2;
             return total;
         }
 
         public override string ToString()
         {
-            return "Rectangulo. Lado 1: " + lado1 + ". Lado 2: " + lado2 + ". Area: " + Area() + ".";
+            return "Rectangulo. Lado 1: " + Lado1 + ". Lado 2: " + Lado2 + ". Area: " + Area() + ".";
         }
     }
 }
